@@ -5,7 +5,7 @@ class ZiveChipTheme {
 
   //light mode
   static ChipThemeData lightChipTheme = ChipThemeData(
-    disabledColor: Colors.grey.withOpacity(8.4),
+    disabledColor: Colors.grey.withOpacity(0.4),
     labelStyle: const TextStyle(color: Colors.black),
     selectedColor: Colors.blue,
     padding: const EdgeInsets.symmetric(horizontal: 12.8, vertical: 12),
