@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
-class ZIveHelperFunctions {
+class ZiveHelperFunctions {
   /// Match a string value with a predefined color
   static Color? getColor(String value) {
     switch (value.toLowerCase()) {
@@ -71,14 +71,18 @@ class ZIveHelperFunctions {
     return Theme.of(context).brightness == Brightness.dark;
   }
 
+  static Size screenSize() {
+    return MediaQuery.of(Get.context!).size;
+  }
+
   /// Get screen width
-  static double screenWidth(BuildContext context) {
-    return MediaQuery.of(context).size.width;
+  static double screenWidth() {
+    return MediaQuery.of(Get.context!).size.width;
   }
 
   /// Get screen height
-  static double screenHeight(BuildContext context) {
-    return MediaQuery.of(context).size.height;
+  static double screenHeight() {
+    return MediaQuery.of(Get.context!).size.height;
   }
 
   /// Format a DateTime object to a string
