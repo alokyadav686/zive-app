@@ -25,9 +25,9 @@ static const String resendEmail = "Resend Email";
 static const String resendEmailIn = "Resend email in";
 
 // -- Authentication Headings Text
-static const String loginTitle = "Welcome back,";
-static const String loginSubTitle = "Discover Limitless Choices and Unmatched Convenience.";
-static const String signupTitle = "Let’s create your account";
+static const String SigninTitle = 'Welcome to ZIVÉ';
+static const String SigninSubTitle = "Live What You Wear";
+static const String signinWelcome = 'Sign in and Join the movement ✨';
 static const String forgetPasswordTitle = "Forgot password";
 static const String forgetPasswordSubtitle = "Don’t worry sometimes people can forget too, enter your email and we will send you a password reset link.";
 static const String changeYourPasswordTitle = "Password Reset Email Sent";
