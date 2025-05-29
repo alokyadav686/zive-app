@@ -27,7 +27,11 @@ class SignInButtons extends StatelessWidget {
                 onTap: () {
                   // Facebook sign-in action
                 },
-                child: const Icon(Icons.facebook, color: Colors.white, size: 28),
+                child: const Icon(
+                  Icons.facebook,
+                  color: Colors.white,
+                  size: 28,
+                ),
               ),
             ),
           ],
@@ -44,7 +48,10 @@ class SignInButtons extends StatelessWidget {
     );
   }
 
-  Widget _buildSocialButton({required VoidCallback onTap, required Widget child}) {
+  Widget _buildSocialButton({
+    required VoidCallback onTap,
+    required Widget child,
+  }) {
     return Material(
       color: Colors.black,
       borderRadius: BorderRadius.circular(ZiveSizes.borderRadiusLg),
@@ -79,16 +86,11 @@ class SignInButtons extends StatelessWidget {
             border: Border.all(color: Colors.white24),
             borderRadius: BorderRadius.circular(ZiveSizes.borderRadiusLg),
           ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              Icon(Icons.mail, color: Colors.white),
-              SizedBox(width: ZiveSizes.spaceBtwButtons),
-              Text(
-                "Sign In with Email",
-                style: TextStyle(fontSize: 16, color: Colors.white),
-              ),
-            ],
+          child: Center(
+            child: Text(
+              "Sign In with Email",
+              style: TextStyle(fontSize: 16, color: Colors.white),
+            ),
           ),
         ),
       ),

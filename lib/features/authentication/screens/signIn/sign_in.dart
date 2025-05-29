@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:zive/common/styles/spacing_styles.dart';
 import 'package:zive/features/authentication/screens/signIn/widget/signin_buttons.dart';
+
 import 'package:zive/utils/constants/text_strings.dart';
 import 'package:zive/utils/helpers/helper.dart';
 
@@ -11,30 +12,64 @@ class SignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = ZiveHelperFunctions.isDarkMode(context);
+
     return Scaffold(
       body: Padding(
         padding: ZiveSpacingStyle.paddingWithAppBarHeight,
         child: Column(
           children: [
+            // Image Grid with Gradient Overlay
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: GridView.count(
-                  crossAxisCount: 3,
-                  mainAxisSpacing: 12,
-                  crossAxisSpacing: 12,
-                  childAspectRatio: 0.7,
-                  physics: const NeverScrollableScrollPhysics(),
-                  children: const [
-                    roundImage('assets/images/image.png'),
-                    roundImage('assets/images/image-1.png'),
-                    roundImage('assets/images/image-2.png'),
-                    roundImage('assets/images/image-3.png'),
-                    roundImage('assets/images/image-4.png'),
-                    roundImage('assets/images/image-4.png'),
-                    roundImage('assets/images/image-4.png'),
-                    SizedBox(),
-                    SizedBox(),
+                child: Stack(
+                  children: [
+                    GridView.count(
+                      crossAxisCount: 3,
+                      mainAxisSpacing: 12,
+                      crossAxisSpacing: 12,
+                      childAspectRatio: 0.7,
+                      physics: const NeverScrollableScrollPhysics(),
+                      children: const [
+                        roundImage('assets/images/image.png'),
+                        roundImage('assets/images/image-1.png'),
+                        roundImage('assets/images/image-2.png'),
+                        roundImage('assets/images/image-3.png'),
+                        roundImage('assets/images/image-4.png'),
+                        roundImage('assets/images/image.png'),
+                        roundImage('assets/images/image-1.png'),
+                        roundImage('assets/images/image-2.png'),
+                        roundImage('assets/images/image-3.png'),
+                        roundImage('assets/images/image-4.png'),
+                        roundImage('assets/images/image.png'),
+                        roundImage('assets/images/image-1.png'),
+                        roundImage('assets/images/image-2.png'),
+                        roundImage('assets/images/image-3.png'),
+                        roundImage('assets/images/image-4.png'),
+                        roundImage('assets/images/image-4.png'),
+                        roundImage('assets/images/image-4.png'),
+                        
+                      ],
+                    ),
+                    // Gradient Overlay
+                    Positioned.fill(
+                      child: Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Container(
+                          height: 100, // Adjust height to control blend area
+                          decoration: const BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                Colors.transparent,
+                                Colors.black,
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -63,7 +98,7 @@ class SignIn extends StatelessWidget {
             ),
             const SizedBox(height: 10),
 
-            // Buttons Section
+            // Social & Email Sign-in Buttons
             const SignInButtons(),
           ],
         ),
@@ -72,6 +107,7 @@ class SignIn extends StatelessWidget {
   }
 }
 
+// Round Image Widget
 class roundImage extends StatelessWidget {
   final String path;
   const roundImage(this.path, {super.key});
