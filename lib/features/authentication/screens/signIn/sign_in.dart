@@ -56,7 +56,7 @@ class SignIn extends StatelessWidget {
                       child: Align(
                         alignment: Alignment.bottomCenter,
                         child: Container(
-                          height: 100, // Adjust height to control blend area
+                          height: 100, 
                           decoration: const BoxDecoration(
                             gradient: LinearGradient(
                               begin: Alignment.topCenter,
