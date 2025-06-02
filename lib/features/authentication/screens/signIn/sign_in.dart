@@ -46,6 +46,12 @@ class SignIn extends StatelessWidget {
                         roundImage('assets/images/image-1.png'),
                         roundImage('assets/images/image-2.png'),
                         roundImage('assets/images/image-4.png'),
+                        roundImage('assets/images/image-3.png'),
+                        roundImage('assets/images/image-4.png'),
+                        roundImage('assets/images/image.png'),
+                        roundImage('assets/images/image-1.png'),
+                        roundImage('assets/images/image-2.png'),
+                        roundImage('assets/images/image-4.png'),
                         roundImage('assets/images/image-4.png'),
                         roundImage('assets/images/image-4.png'),
                         
