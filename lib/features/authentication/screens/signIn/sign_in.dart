@@ -99,7 +99,7 @@ class SignIn extends StatelessWidget {
             ),
             const SizedBox(height: 10),
 
-            // Social & Email Sign-in Buttons
+
             const SignInButtons(),
           ],
         ),
