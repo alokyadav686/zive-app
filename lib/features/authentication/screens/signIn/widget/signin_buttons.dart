@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
+import 'package:zive/features/authentication/screens/signIn/sign_in_through_mail.dart';
 import 'package:zive/utils/constants/sizes.dart';
 
 class SignInButtons extends StatelessWidget {
@@ -42,6 +44,7 @@ class SignInButtons extends StatelessWidget {
         _buildEmailButton(
           onTap: () {
             // Email sign-in action
+            Get.off(SignInThroughMail());
           },
         ),
       ],
