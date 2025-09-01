@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zive/utils/constants/text_strings.dart';
 
 class SignInThroughMail extends StatelessWidget {
   const SignInThroughMail({super.key});
@@ -24,31 +25,19 @@ class SignInThroughMail extends StatelessWidget {
                   // Top Row
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      PillBox(),
-                      PillBox(),
-                      PillBox(),
-                    ],
+                    children: [PillBox(), PillBox(), PillBox()],
                   ),
 
                   // Middle Row
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      PillBox(),
-                      StarburstIcon(),
-                      PillBox(),
-                    ],
+                    children: [PillBox(), StarburstIcon(), PillBox()],
                   ),
 
                   // Bottom Row
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      PillBox(),
-                      PillBox(),
-                      PillBox(),
-                    ],
+                    children: [PillBox(), PillBox(), PillBox()],
                   ),
                 ],
               ),
@@ -58,7 +47,7 @@ class SignInThroughMail extends StatelessWidget {
 
             /// Welcome Texts
             Text(
-              'Welcome to ZIVÉ',
+              ZiveTexts.SigninTitle,
               style: TextStyle(
                 fontSize: 26,
                 fontWeight: FontWeight.bold,
@@ -68,7 +57,7 @@ class SignInThroughMail extends StatelessWidget {
             ),
             const SizedBox(height: 4),
             const Text(
-              'Live What You Wear',
+              ZiveTexts.SigninSubTitle,
               style: TextStyle(
                 fontSize: 16,
                 fontStyle: FontStyle.italic,
@@ -83,11 +72,8 @@ class SignInThroughMail extends StatelessWidget {
                 Icon(Icons.arrow_back, color: Colors.white),
                 SizedBox(width: 8),
                 Text(
-                  'Sign in and join the movement ✨',
-                  style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 14,
-                  ),
+                  ZiveTexts.signinWelcome,
+                  style: TextStyle(color: Colors.white70, fontSize: 14),
                 ),
               ],
             ),
@@ -97,7 +83,7 @@ class SignInThroughMail extends StatelessWidget {
             TextField(
               style: const TextStyle(color: Colors.white),
               decoration: InputDecoration(
-                hintText: 'Email Address',
+                hintText: ZiveTexts.emailAddress,
                 hintStyle: const TextStyle(color: Colors.white54),
                 filled: true,
                 fillColor: Colors.transparent,
@@ -163,11 +149,13 @@ class StarburstIcon extends StatelessWidget {
     return Container(
       height: 40,
       width: 40,
-      decoration: const BoxDecoration(
-        shape: BoxShape.circle,
-      ),
+      decoration: const BoxDecoration(shape: BoxShape.circle),
       child: Center(
-        child: Icon(Icons.star, color: Colors.white, size: 28), // Replace with Image.asset(...) if needed
+        child: Icon(
+          Icons.star,
+          color: Colors.white,
+          size: 28,
+        ), // Replace with Image.asset(...) if needed
       ),
     );
   }
